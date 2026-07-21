@@ -1,0 +1,19 @@
+﻿html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    h1 Books
+    a(href='/update-cobj') Add to this table
+    table(border='1' cellpadding='8')
+      thead
+        tr
+          th Name
+          th Author
+          th Genre
+      tbody
+        each record in records
+          tr
+            td= record.properties.name
+            td= record.properties.author
+            td= record.properties.genre
